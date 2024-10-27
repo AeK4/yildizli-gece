@@ -1,0 +1,84 @@
+/* Genel stil ayarları */
+body {
+    background-color: #0B3D91; /* Yıldızlı gece için koyu mavi */
+    color: #FFD700; /* Altın sarısı yazılar */
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Yıldızların taşmasını önlemek için */
+}
+
+/* Başlık ve içerik stilleri */
+header, section, footer {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.6); /* Hafif şeffaflık efekti */
+    border-radius: 10px;
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+}
+
+section {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Fotoğraf stilleri */
+.photo {
+    width: 300px; /* Fotoğrafların genişliği */
+    height: auto; /* Orantılı yükseklik */
+    margin: 10px; /* Fotoğraflar arasında boşluk */
+    border-radius: 10px; /* Kenarları yuvarlat */
+}
+
+/* Şarkılar için bölüm stili */
+#music {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+audio {
+    margin: 10px 0;
+}
+
+/* Yıldız efektleri */
+@keyframes yıldızHareketi {
+    from { transform: translateY(0); }
+    to { transform: translateY(-1000px); }
+}
+
+.stars {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #FFD700;
+    border-radius: 50%;
+    animation: yıldızHareketi 50s linear infinite;
+}
+
+.stars:nth-child(odd) {
+    animation-duration: 60s;
+}
+
+.stars:nth-child(even) {
+    animation-duration: 40s;
+}
